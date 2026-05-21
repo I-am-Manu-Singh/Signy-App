@@ -3,6 +3,7 @@ rootProject.name = "MyApplication"
 include(":androidApp")
 include(":shared")
 include(":desktopApp")
+include(":server")
 
 pluginManagement {
     repositories {
@@ -13,9 +14,9 @@ pluginManagement {
     }
 
     plugins {
-        val kotlinVersion = extra["kotlin.version"] as String
-        val agpVersion = extra["agp.version"] as String
-        val composeVersion = extra["compose.version"] as String
+        val kotlinVersion = settings.extra["kotlin.version"] as String
+        val agpVersion = settings.extra["agp.version"] as String
+        val composeVersion = settings.extra["compose.version"] as String
 
         kotlin("jvm").version(kotlinVersion)
         kotlin("multiplatform").version(kotlinVersion)
@@ -25,6 +26,7 @@ pluginManagement {
         id("com.android.library").version(agpVersion)
 
         id("org.jetbrains.compose").version(composeVersion)
+        kotlin("plugin.compose").version(kotlinVersion)
     }
 }
 

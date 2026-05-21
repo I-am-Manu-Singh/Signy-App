@@ -1,5 +1,6 @@
-import androidx.compose.runtime.Composable
+package com.myapplication.common.util
 
-actual fun getPlatformName(): String = "Android"
+import androidx.compose.runtime.Composable
+import com.myapplication.common.App
 
 @Composable fun MainView() = App()

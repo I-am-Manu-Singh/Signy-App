@@ -31,7 +31,7 @@
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>arm64</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -46,5 +46,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GMSApiKey</key>
+	<string>AIzaSyBXZmtsmSyL91tHTClYX0fceQ-2mqkhh_Q</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow location access for business discovery</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow access to camera for secure video communication</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Allow access to microphone for secure audio communication</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to library for identity document upload</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 </dict>
 </plist>

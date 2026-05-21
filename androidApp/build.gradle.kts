@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.application")
     id("org.jetbrains.compose")
+    kotlin("plugin.compose")
 }
 
 kotlin {
@@ -10,6 +11,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(project(":shared"))
+                implementation("io.insert-koin:koin-android:${project.property("koin.version")}")
+                implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
             }
         }
     }
@@ -22,7 +25,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "com.myapplication.MyApplication"
+        applicationId = "com.myapplication"
         minSdk = (findProperty("android.minSdk") as String).toInt()
         targetSdk = (findProperty("android.targetSdk") as String).toInt()
         versionCode = 1
